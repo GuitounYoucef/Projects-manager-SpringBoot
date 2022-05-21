@@ -1,0 +1,14 @@
+com\SoftwareArt\ProjectsManager\repositorys\ChapitreRepository.class
+com\SoftwareArt\ProjectsManager\repositorys\ArticlesRepository.class
+com\SoftwareArt\ProjectsManager\models\Article.class
+com\SoftwareArt\ProjectsManager\exception\ResourceNotFoundException.class
+com\SoftwareArt\ProjectsManager\models\ChapitreName.class
+com\SoftwareArt\ProjectsManager\models\Operationproject.class
+com\SoftwareArt\ProjectsManager\controllers\ProjectsController.class
+com\SoftwareArt\ProjectsManager\ProjectsManagerApplication.class
+com\SoftwareArt\ProjectsManager\repositorys\OperationProjectRepository.class
+com\SoftwareArt\ProjectsManager\repositorys\ProjectsRepository.class
+com\SoftwareArt\ProjectsManager\models\Projects.class
+com\SoftwareArt\ProjectsManager\models\Chapitres.class
+com\SoftwareArt\ProjectsManager\models\Operationkey.class
+com\SoftwareArt\ProjectsManager\models\Projectkey.class

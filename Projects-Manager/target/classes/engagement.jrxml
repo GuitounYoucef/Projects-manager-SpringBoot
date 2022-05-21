@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="engagement" language="groovy" pageWidth="1191" pageHeight="842" orientation="Landscape" columnWidth="1151" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cb875bf-2734-4622-9055-85cd649a295e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<parameter name="ProjectName" class="java.lang.String"/>
+	<parameter name="Chapitre" class="java.lang.String"/>
+	<parameter name="SousChapitre" class="java.lang.String"/>
+	<parameter name="Article" class="java.lang.String"/>
+	<parameter name="Narticle" class="java.lang.Long"/>
+	<parameter name="Nchapitre" class="java.lang.Long"/>
+	<parameter name="Nsouschapitre" class="java.lang.Long"/>
+	<parameter name="NumOpr" class="java.lang.Long"/>
+	<field name="descriptionOpr" class="java.lang.String"/>
+	<field name="montantOpr" class="java.lang.Double"/>
+	<field name="nouvMontant" class="java.lang.Double"/>
+	<field name="ancienMontant" class="java.lang.Double"/>
+	<detail>
+		<band height="802">
+			<property name="com.jaspersoft.studio.layout"/>
+			<staticText>
+				<reportElement x="591" y="10" width="539" height="40" uuid="40a53c23-cf98-4c99-806d-10feb7179df6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[تفاصيل العمليات]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="59" width="539" height="20" uuid="6927d156-dc79-488f-9e60-323d934a8957"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Détail des engagements]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="79" width="419" height="29" uuid="37c6cfc8-fe53-4229-bac6-2e79e44416fd"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[   Nature des Engagements]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="890" y="80" width="110" height="28" uuid="a3b10325-3927-4f57-aec4-7c4726c197e0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[طبيعة العمليات (1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1010" y="79" width="120" height="29" uuid="1f816fe1-63de-4956-995b-1b2056611866"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ Montant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1071" y="79" width="50" height="30" uuid="2ae5f890-af25-4abc-bf0d-d1628e3208be"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[المبلغ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="108" width="419" height="412" uuid="ca6001f6-ec2c-428b-b727-a2c67bc675cd"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1010" y="108" width="120" height="412" uuid="d0f17377-4aed-48c8-bd14-099e49ee8128"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="520" width="419" height="40" uuid="6ad8016f-f2d5-4e68-83ff-6162537dac9a"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="940" y="520" width="70" height="20" uuid="dcabd1bb-85e4-47f8-ba33-89e258396df3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[المجموع]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="940" y="540" width="70" height="20" uuid="8f46052d-5267-46d8-834b-89f53acac149"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1010" y="520" width="120" height="40" uuid="983f54a5-3b99-4c27-a3b8-49c9a7099c72"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="39" width="100" height="20" uuid="6f9a5415-198a-482a-8914-fa002c5f9392"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ولاية أولاد جلال]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="59" width="100" height="20" uuid="d9730a5e-17d0-4974-b468-60ff8974243f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[دائرة سيدي خالد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="79" width="100" height="20" uuid="d5db4b9c-4a30-4bb2-a4bb-e50013c6ad69"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[بلدية سيدي خالد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="20" width="490" height="20" uuid="6fd2c787-f77a-439c-a295-25f0b4284b7b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الجمهورية الجزائرية الديمقراطية الشعبية]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="90" width="490" height="20" uuid="53ab1a01-7532-4505-b93d-2b60e9e8c077"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[بطاقة إلتزام]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="110" width="490" height="30" uuid="c3906e23-259d-45e2-849d-9e0098c66942"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="22" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ميزانية البلدية]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="170" width="17" height="17" uuid="a4340150-bc56-4074-85df-91ae1372e7c6"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="170" width="30" height="17" uuid="25a9d90a-08c2-41b6-add0-5782449d4c57"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="220" width="17" height="17" uuid="d46bfa66-e6ba-4935-9dd7-84bff4a54bca">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="220" width="30" height="17" uuid="66491c78-70de-441e-a6b3-2d326667b5e0"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="170" width="17" height="17" uuid="6cb8e372-894f-4466-a5c0-f32e8ce2d14d">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="170" width="30" height="17" uuid="19632d83-e099-48fc-9a1d-9fd6875662f3"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="220" width="17" height="17" uuid="1dc23d65-aa4c-4a40-a190-7226c292540d">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="220" width="30" height="17" uuid="d8f8b07c-0abf-4a17-9498-5ea30cbd2615">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="200" width="17" height="17" uuid="fdae58b4-5de6-4f7a-9dfb-f4f3934696db">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="200" width="54" height="17" uuid="ad67236d-5bc0-44fe-b747-10a52f4645ef"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="230" width="17" height="17" uuid="b0fc39f1-95a3-4279-9b85-5d787565d346">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="230" width="54" height="17" uuid="36405614-9b65-412f-ae45-2001c81f7705"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="130" height="40" uuid="ec98fc21-02f8-4edb-880f-09e733680649"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="190" width="130" height="70" uuid="583a1096-5d8a-43cf-8728-d24ce18024fa"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="150" width="120" height="100" uuid="22083b69-70a5-4a76-b61b-e7488fc94f7a"/>
+				<box padding="0">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="448" y="170" width="30" height="20" uuid="6d9f19b0-2d2c-4b79-a8c2-9a2531ab5b29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[السنة]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="200" width="80" height="20" uuid="2a7663e6-dbf5-4f36-bcb6-df01ba4683b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[إستمارة رقم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="130" height="20" uuid="733437ed-84af-4383-b279-274b25f61cab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[تأشيرة المراقب المالي]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="170" width="130" height="20" uuid="1d005a19-7426-4278-8fa5-93109533b66e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Visa du contrôle financier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="284" width="490" height="156" uuid="60b664d7-7d3d-45e0-aaae-a6fc41233441"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="440" width="120" height="29" uuid="5d4568b9-6468-46a3-b4a9-c82ba5f9151a"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="440" width="90" height="29" uuid="2bc62476-3986-4579-bb5f-b37b0034b8d3"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="440" width="70" height="29" uuid="5cc1d6fa-5afc-401f-9530-cc1432fed2e9"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="440" width="70" height="29" uuid="7cb60c43-ef22-4471-a07f-1335a8fb2652"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="469" width="120" height="40" uuid="f8c6ff70-58a5-43c5-a67d-955b74c05313"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="469" width="90" height="40" uuid="fc0f7e8d-26a5-4a75-abb9-49b3f504cab9"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="469" width="70" height="40" uuid="53b1829a-5293-4d0d-bc52-85b61e2fc71b"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="469" width="70" height="40" uuid="d8034be9-1746-440d-9097-17d174ab82bd"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="585" width="100" height="20" uuid="9cc81707-8df5-4f99-adbf-392a34451899"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[عنوان الباب الفرعي : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="565" width="100" height="20" uuid="6fcee07e-eb49-48bc-8a1f-a1af8fe3d279"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[عنـوان الباب :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="605" width="100" height="20" uuid="53d3b1f3-4a6c-437b-ae58-2c3a046bde41"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[عنوان المـادة : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="660" width="100" height="20" uuid="008e618b-b707-4c31-b2c9-18211a03eb1a"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[المشروع :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="720" width="100" height="20" uuid="f441a7fd-ad05-466f-809f-1f8d3b55dc47"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[سيدي خالد في :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1021" y="580" width="100" height="20" uuid="86c2479f-de27-4227-a9bc-2d4010c18424"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[المبلغ بلسان القلم :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="469" width="70" height="40" uuid="0e951e2f-86f5-4a3c-a6c4-5ad6d731f3dd"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="440" width="70" height="29" uuid="c20ad79a-8216-41d7-8236-31b1a374ef36"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="469" width="70" height="40" uuid="9e914844-8c25-4cf5-84db-a405c4984769"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="440" width="70" height="29" uuid="3460f465-4036-40b7-92c7-1bbe14074c45"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="437" width="90" height="20" uuid="08bf78ee-e085-4092-ab1d-758e56ff903b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الرصيد الجديد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="457" width="90" height="20" uuid="33a8c8d8-bbe8-4101-b0f4-cb73c5c8d299"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nouveau Solde ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="457" width="90" height="20" uuid="b2abd171-8c90-495a-889c-b349c2f390e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Montant de l'opération ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="437" width="90" height="20" uuid="57c393e1-9d92-406e-859f-ad84467de6aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[مبلغ العملية ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="457" width="90" height="20" uuid="2c0d2f88-8b46-4208-bb3b-933ea6b311cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ancien Solde ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="437" width="90" height="20" uuid="2b73682c-304a-4b1b-9e63-6e9908cf8b09"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الرصيد القديم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="457" width="90" height="20" uuid="64d41752-b1d6-4803-9cec-16dc58c567f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Article ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="440" width="70" height="29" uuid="ecb3a759-a2cd-4bca-8657-3e141c7b03b7"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="437" width="90" height="20" uuid="4c27bdc2-2819-42cc-a951-219c8090d056"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[المادة]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="457" width="90" height="20" uuid="e2175dd2-59bb-47eb-82cc-3a4779ec9501"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[s/chapitere]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="440" width="70" height="29" uuid="92a38231-46e1-40f6-96cc-4fd6dca1f80c"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="437" width="90" height="20" uuid="53afa940-94fc-43da-a011-2bcc6d163d8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الباب الفرعي]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="457" width="90" height="20" uuid="392f04b7-4f9a-44b0-a390-4ab773431cf4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Chapitre ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="440" width="70" height="29" uuid="b349cdfd-ff8d-4889-9c06-0c7059a1ec2f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="437" width="90" height="20" uuid="45ddd7ab-b139-44bc-905d-96048770bea5"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الباب]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="340" width="90" height="20" uuid="62d649b7-6303-4221-8e15-fc2e1cdf38da"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(     )     la dépense]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="320" width="90" height="20" uuid="19b28d7e-a4c8-4f71-933c-2a47fe7a319d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الصرف]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="371" width="90" height="20" uuid="5eef5923-f7ec-400f-8160-302e422da820"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[الإقتصاد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="391" width="90" height="20" uuid="196e3f20-fb04-483c-8a3f-b91ea254671e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(     )     l'économie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="340" width="20" height="20" uuid="00852f20-bcc9-40ca-8d74-5179a7141189"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="391" width="20" height="20" uuid="720d0090-9017-47ef-84e6-361f1c66d698"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="540" width="140" height="20" uuid="dde5cd80-1143-423c-acfd-3e8152b7f707"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Observations du service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="520" width="90" height="20" uuid="e1ec84cd-e00f-4edd-8c06-5fb7b67dee05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ملاحظة المصلحة]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1010" y="110" width="120" height="40" uuid="839b52fd-e6d0-430a-932f-0efd61ade163"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantOpr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="110" width="400" height="40" uuid="819e2d9e-cfe3-4972-80c3-dec8f2390517"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descriptionOpr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="660" width="440" height="40" uuid="b2004dcf-0fd1-4fc7-a545-f616eb040de3"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ProjectName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="565" width="390" height="20" uuid="ca9660cd-e86b-4731-b0e0-28a23ee9423a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Chapitre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="585" width="390" height="20" uuid="7e715b1e-12c1-499b-961d-6de71c661067"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SousChapitre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="605" width="390" height="20" uuid="8de8221f-e10e-4385-a7a5-73010d96ec7b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Article}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="470" width="70" height="39" uuid="61c15eec-83c1-4978-a0db-e61dc261c2b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Narticle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="470" width="70" height="39" uuid="61f4214b-ddf0-4620-b5b9-cf245aa577af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nsouschapitre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="470" width="70" height="39" uuid="13fd7355-801b-4b27-89aa-7516d2c2f234"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nchapitre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="626" width="490" height="35" uuid="930bcd58-8457-4fe3-b25a-b0229396ad4b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descriptionOpr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1011" y="520" width="120" height="40" uuid="5be81559-13b4-4309-a883-ed2990597d66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantOpr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="470" width="90" height="40" uuid="d300dedf-6cb2-48c5-997e-d03b75a0682f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantOpr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="469" width="120" height="40" uuid="f5d21b36-774b-4949-97bb-8d2bf0e345a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nouvMontant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="470" width="70" height="39" uuid="272f716b-d67a-490a-9d97-f210dd1d5565"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ancienMontant}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="111" y="200" width="30" height="17" uuid="ccefbbd1-a918-4b00-8654-72dbb0ca6e7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[رقم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="111" y="230" width="33" height="17" uuid="35ea7897-6934-42a6-a4c6-1fde9f0f45f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[بتاريخ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="20" y="200" width="20" height="17" uuid="b65cdab2-63a9-4939-806b-e5d1203e4370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="20" y="230" width="20" height="17" uuid="18c57d86-403c-4b16-8ca6-788122ff9d87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Du]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="220" width="46" height="16" uuid="44da5dde-7cfd-469b-bad7-34de9d853d59"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="C:\Users\Guitoun\Desktop\fonts\arial.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NumOpr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
