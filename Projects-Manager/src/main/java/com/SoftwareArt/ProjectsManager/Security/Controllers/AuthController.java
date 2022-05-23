@@ -18,7 +18,7 @@ public class AuthController {
 	AuthService authService;
 	
 	@PostMapping("/login")
-    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) throws Exception {
 		return authService.login(loginRequest);
     }
 }

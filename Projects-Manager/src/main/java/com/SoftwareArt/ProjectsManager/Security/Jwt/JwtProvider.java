@@ -3,8 +3,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.User;
+
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 
@@ -14,10 +14,10 @@ public class JwtProvider {
 
     private String secret_key="welcome";
 
-    public String generateToken(Authentication authentication) {
-        User principal = (User) authentication.getPrincipal();
+    public String generateToken(UserDetails userDetails) {
+
         return Jwts.builder()
-                .setSubject(principal.getUsername())
+                .setSubject(userDetails.getUsername())
                 .signWith(SignatureAlgorithm.HS512, secret_key)
                 .compact();
     }
