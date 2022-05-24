@@ -11,7 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.SoftwareArt.ProjectsManager.Security.Jwt.JwtAuthenticationFilter;
 import com.SoftwareArt.ProjectsManager.Security.Services.MyuserDetailsService;
 
 
@@ -20,6 +22,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	
 	// Authorization ----------------------------------------------------------------------------------
+	@Autowired
+	
+	private JwtAuthenticationFilter jwtAuthenticationFilter;
 	@Override
 	public void configure(HttpSecurity httpSecurity) throws Exception {
 		 httpSecurity.csrf().disable()
@@ -27,15 +32,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		   .antMatchers("/auth/**")       
 		   .permitAll()   
 		   .anyRequest()
-		   .authenticated();
-		  //  .and()
-		  // .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+		   .authenticated()
+		   .and()
+		   .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 		
 	}
-	/*	@Bean
-	JwtAuthenticationFilter jwtAuthenticationFilter() {
-	    return new JwtAuthenticationFilter();
-	}*/
+
 	
 //  Authentication ----------------------------------------------------------------------------------
 	
