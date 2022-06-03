@@ -3,11 +3,16 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -35,17 +40,18 @@ public class JwtProvider {
 // Generation-------------------------------------------------------------
     public String generateToken(UserDetails userDetails) {
 		Map<String, Object> claims = new HashMap<>();
-		return CreateToken(claims, userDetails.getUsername());
-		
-    /*    return Jwts.builder()
-                .setSubject(userDetails.getUsername())
-                .signWith(SignatureAlgorithm.HS512, secret_key)
-                .compact();*/
+		return CreateToken(claims, userDetails.getUsername(),userDetails.getAuthorities());
    
     }
     
-    public String CreateToken(Map<String, Object> claims, String subject) {
-		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+    public String CreateToken(Map<String, Object> claims, String subject,Collection<? extends GrantedAuthority> authorities ) {
+
+
+		return Jwts.builder().
+				setClaims(claims)
+				.setSubject(subject)
+				.claim("roles", authorities.stream().map(ga->ga.getAuthority()).collect(Collectors.toList()))
+				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() * 1000*60*60*10))
 				.signWith(SignatureAlgorithm.HS512, secret_key).compact();
 	}

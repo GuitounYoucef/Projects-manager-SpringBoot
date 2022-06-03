@@ -8,6 +8,7 @@ import lombok.Data;
 public class AuthenticationResponse {
     private String authenticationToken;
     private String username;
+    private String role;
     
 	public String getAuthenticationToken() {
 		return authenticationToken;
@@ -25,11 +26,22 @@ public class AuthenticationResponse {
 		this.username = username;
 	}
 
-	public AuthenticationResponse(String authenticationToken, String username) {
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public AuthenticationResponse(String authenticationToken, String username, String role) {
 		super();
 		this.authenticationToken = authenticationToken;
 		this.username = username;
+		this.role = role;
 	}
+
+
     
     
 }

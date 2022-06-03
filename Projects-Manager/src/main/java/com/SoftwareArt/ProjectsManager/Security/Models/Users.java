@@ -17,8 +17,27 @@ public class Users {
 	private String userName;
 	@Column(name = "Password")
 	private String Userpassword;
-	@Column(name = "Email")
-	private String UserEmail;
+	@Column(name = "Role")
+	private String Role;
+
+	@Column(name = "accountStatus")
+	private Boolean accountStatus;
+	
+
+	public Users(Long id, String userName, String userpassword, String role, Boolean accountStatus) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		Userpassword = userpassword;
+		Role = role;
+		this.accountStatus = accountStatus;
+	}
+	public Boolean getAccountStatus() {
+		return accountStatus;
+	}
+	public void setAccountStatus(Boolean accountStatus) {
+		this.accountStatus = accountStatus;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -35,18 +54,14 @@ public class Users {
 	public void setUserpassword(String userpassword) {
 		Userpassword = userpassword;
 	}
-	public String getUserEmail() {
-		return UserEmail;
-	}
-	public void setUserEmail(String userEmail) {
-		UserEmail = userEmail;
-	}
 
-	public Users(String userName, String userpassword, String userEmail) {
-		super();
-		this.userName = userName;
-		Userpassword = userpassword;
-		UserEmail = userEmail;
+
+
+	public String getRole() {
+		return Role;
+	}
+	public void setRole(String role) {
+		Role = role;
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;

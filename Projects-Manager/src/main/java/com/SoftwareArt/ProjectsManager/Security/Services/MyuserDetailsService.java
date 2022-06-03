@@ -29,13 +29,15 @@ public class MyuserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Users user=userRepository.findByUserName(username).orElseThrow(() ->
         new UsernameNotFoundException("No user found " + username));
-        return new org.springframework.security.core.userdetails.User(user.getUserName(),
-                user.getUserpassword(),true, true, true, true,getAuthorities("ROLE_USER"));
+        MyUserDetail myUserDetail=new MyUserDetail(user);
+        return myUserDetail;
+        
+       
+        
 	}
 	
-    private Collection<? extends GrantedAuthority> getAuthorities(String role_user) {
-        return Collections.singletonList(new SimpleGrantedAuthority(role_user));
-    }
+	
+
 	
 
 }
