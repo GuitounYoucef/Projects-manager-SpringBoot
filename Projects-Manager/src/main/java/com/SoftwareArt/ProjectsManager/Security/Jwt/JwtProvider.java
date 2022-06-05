@@ -52,16 +52,22 @@ public class JwtProvider {
 				.setSubject(subject)
 				.claim("roles", authorities.stream().map(ga->ga.getAuthority()).collect(Collectors.toList()))
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() * 1000*60*60*10))
+				.setExpiration(new Date(System.currentTimeMillis() + 1000*60*10))
 				.signWith(SignatureAlgorithm.HS512, secret_key).compact();
 	}
     
 // Validation-------------------------------------------------------------
     public boolean validateToken(String token, UserDetails userDetails) {
         final String username=getUsernameFromJWT(token);
-        return (username.equals(userDetails.getUsername()));
+        return (username.equals(userDetails.getUsername())) && (!isExpiredToken(token));
     }
-    // Extract expiration date *******************************************
+    //expiration date *******************************************
+    private boolean isExpiredToken(String token)
+    
+    {
+    	Date d=new Date(System.currentTimeMillis());
+    	return  extractExpiration(token).before(d);
+    }
     public Date extractExpiration(String token) {
     	return extractClaimFromToken(token, Claims::getExpiration);
     	
